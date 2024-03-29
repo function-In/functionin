@@ -18,7 +18,7 @@ import {Conf} from "@/Conf";
         Hi~<br>Welcome to website<br>I'm functionIn<br>A developer who loves technology<br>
       </text>
       <!-- 'Go blog' link-button -->
-      <router-link to="/blog">GO BLOG</router-link>
+      <!--      <router-link to="/blog">GO BLOG</router-link>-->
     </div>
   </div>
 </template>
