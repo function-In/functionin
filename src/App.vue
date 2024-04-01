@@ -25,8 +25,8 @@ onMounted(() => {
   color: #2c3e50;
 }
 body{
-  min-width: 500px;
-  min-height: 800px;
+  //min-width: 500px;
+  //min-height: 800px;
 }
 
 </style>

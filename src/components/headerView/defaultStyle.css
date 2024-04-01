@@ -1,0 +1,272 @@
+/* rainbow border */
+@keyframes rainbow {
+    0% {
+        box-shadow: 0 0 6px red;
+        border-left: 2px solid red;
+        border-top: 2px solid green;
+        border-right: 2px solid blue;
+        border-bottom: 2px solid yellow;
+    }
+    14.3% {
+        box-shadow: 0 0 6px orange;
+        border-left: 2px solid violet;
+        border-top: 2px solid blue;
+        border-right: 2px solid green;
+        border-bottom: 2px solid orange;
+    }
+    28.6% {
+        box-shadow: 0 0 6px green;
+        border-left: 2px solid blue;
+        border-top: 2px solid yellow;
+        border-right: 2px solid orange;
+        border-bottom: 2px solid indigo;
+    }
+    42.9% {
+        box-shadow: 0 0 6px blue;
+        border-left: 2px solid green;
+        border-top: 2px solid orange;
+        border-right: 2px solid indigo;
+        border-bottom: 2px solid violet;
+    }
+    57.2% {
+        box-shadow: 0 0 6px indigo;
+        border-left: 2px solid orange;
+        border-top: 2px solid indigo;
+        border-right: 2px solid violet;
+        border-bottom: 2px solid red;
+    }
+    71.5% {
+        box-shadow: 0 0 6px violet;
+        border-left: 2px solid indigo;
+        border-top: 2px solid violet;
+        border-right: 2px solid red;
+        border-bottom: 2px solid green;
+    }
+    85.8% {
+        box-shadow: 0 0 6px red;
+        border-left: 2px solid violet;
+        border-top: 2px solid red;
+        border-right: 2px solid green;
+        border-bottom: 2px solid blue;
+    }
+    100% {
+        box-shadow: 0 0 6px orange;
+        border-left: 2px solid red;
+        border-top: 2px solid green;
+        border-right: 2px solid blue;
+        border-bottom: 2px solid yellow;
+    }
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+header.headerWhiteColor {
+    background-color: white;
+    box-shadow: 0 0 4px grey;
+}
+
+header.headerEmptyColor {
+    background-color: transparent;
+    box-shadow: 0 0 0 transparent;
+}
+
+header.headerMenuColor {
+    background-color: white;
+    box-shadow: 0 0 4px grey;
+}
+
+header .headerBox {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+/* HeaderLogoBox */
+header .headerBox .headerLogoBox {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* HeaderLogoBox link */
+header .headerBox .headerLogoBox a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* HeaderLogoBox link image */
+header .headerBox .headerLogoBox img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    animation: rainbow 5s linear infinite;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+header .headerBox .headerLogoBox img.click {
+    transform: rotate(360deg);
+}
+
+/* HeaderLogoBox link image:::hover */
+header .headerBox .headerLogoBox a:hover img,
+header .headerBox .headerLogoBox img:hover {
+    opacity: 0.8;
+}
+
+/* HeaderLogoBox link text and title */
+header .headerBox .headerLogoBox .title {
+    font-size: smaller;
+    margin-right: 10px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* HeaderLogoBox link text and title:::hover */
+header .headerBox .headerLogoBox a:hover .title,
+header .headerBox .headerLogoBox .title:hover {
+    color: grey;
+}
+
+header .headerBox .headerLogoBox .title .text {
+    font-weight: bold;
+    font-size: large;
+    line-height: 30px;
+}
+
+header .headerBox .headerLogoBox a:hover .title .text,
+header .headerBox .headerLogoBox .title:hover .text {
+    color: grey;
+}
+
+/* MenuTab */
+header .headerBox .headerMenu, header .headerBox .headerMenu li {
+    list-style: none;
+}
+
+header .headerBox .headerMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+header .headerBox .headerMenu li a {
+    display: inline-block;
+    padding: 15px;
+}
+
+header .headerBox .headerMenu li a:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* MenuTab active */
+header .headerBox .headerMenu li.active a {
+    color: mediumseagreen;
+    font-weight: bold;
+}
+
+/* MenuButton */
+header .headerBox .headerMenuBtn {
+    width: 35px;
+    height: 20px;
+    display: none;
+    margin-right: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+header .headerBox .headerMenuBtn .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+header .headerBox .headerMenuBtn.active .ALine {
+    transform-origin: left;
+    transform: rotate(30deg);
+}
+
+header .headerBox .headerMenuBtn.active .BLine {
+    /*display: none;*/
+    transform-origin: center;
+    transform: rotate(360deg);
+    opacity: 0;
+}
+
+header .headerBox .headerMenuBtn.active .CLine {
+    transform-origin: left;
+    transform: rotate(-30deg);
+}
+
+/* MenuPanel  */
+header .MenuPanel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: -80px;
+    background-color: white;
+    z-index: 0;
+}
+
+header .MenuPanelHide {
+    transform: translateY(2222px);
+}
+
+/* MenuPanel MenuList */
+header .MenuPanel .headerMenu, header .MenuPanel .headerMenu li {
+    list-style: none;
+}
+
+header .MenuPanel .headerMenu {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    max-width: 1200px;
+}
+
+header .MenuPanel .headerMenu li {
+    border-bottom: 1px solid #bcbcbc;
+}
+
+header .MenuPanel .headerMenu a {
+    height: 100%;
+    padding: 20px;
+    display: block;
+}
+
+header .MenuPanel .headerMenu li a:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* MenuList active */
+header .MenuPanel .headerMenu li.active a {
+    color: mediumseagreen;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.30);
+}

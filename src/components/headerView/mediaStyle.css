@@ -1,0 +1,49 @@
+/* Desktop Style */
+@media only screen and (max-width: 1309px) {
+
+    header .headerBox {
+        max-width: 960px;
+    }
+
+    header .MenuPanel .headerMenu {
+        max-width: 960px;
+    }
+}
+
+/* Tablet Style */
+@media screen and (max-width: 991px) {
+    header .headerBox {
+        max-width: 720px;
+    }
+
+    header .headerBox .headerMenu {
+        display: none;
+    }
+
+    header .headerBox .headerMenuBtn {
+        display: flex;
+    }
+
+    header .MenuPanel .headerMenu {
+        max-width: 720px;
+    }
+}
+
+/* Phone Style */
+@media screen and (max-width: 768px) {
+    header .headerBox {
+        max-width: 540px;
+    }
+
+    header .headerBox .headerMenu {
+        display: none;
+    }
+
+    header .headerBox .headerMenuBtn {
+        display: flex;
+    }
+
+    header .MenuPanel .headerMenu {
+        max-width: 540px;
+    }
+}

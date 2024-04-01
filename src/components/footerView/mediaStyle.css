@@ -1,0 +1,20 @@
+/* Desktop Style */
+@media only screen and (max-width: 1309px) {
+    footer .footerBox {
+        max-width: 960px;
+    }
+}
+
+/* Tablet Style */
+@media screen and (max-width: 991px) {
+    footer .footerBox {
+        max-width: 720px;
+    }
+}
+
+/* Phone Style */
+@media screen and (max-width: 768px) {
+    footer .footerBox {
+        max-width: 540px;
+    }
+}

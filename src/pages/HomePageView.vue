@@ -1,11 +1,13 @@
 <script setup>
-import HeaderView from "@/components/HeaderView.vue";
+
 import {Conf} from "@/Conf";
+import HeaderView from "@/components/headerView/headerView.vue";
+import FooterView from "@/components/footerView/footerView.vue";
 </script>
 
 <template>
   <div class="HomePageView">
-    <!-- HeaderView -->
+    <!-- headerView -->
     <header-view></header-view>
 
     <div class="Content">
@@ -14,12 +16,13 @@ import {Conf} from "@/Conf";
         <img title="functionIn" :src="Conf.getQQImage()" :alt="Conf.getQQImage()"/>
       </div>
       <!-- TipsText -->
-      <text class="title" title="Hi~I'm functionIn.Welcome to website">
-        Hi~<br>Welcome to website<br>I'm functionIn<br>A developer who loves technology<br>
+      <text class="title" title="Welcome to website">
+        <br>Welcome to website<br>I'm functionIn<br>A developer who loves technology<br>
       </text>
       <!-- 'Go blog' link-button -->
-      <!--      <router-link to="/blog">GO BLOG</router-link>-->
+      <router-link to="/blog">GO BLOG</router-link>
     </div>
+    <footer-view></footer-view>
   </div>
 </template>
 
@@ -27,7 +30,7 @@ import {Conf} from "@/Conf";
 
 /* HomePageView Content*/
 .HomePageView .Content {
-  height: 100vh;
+//height: 100vh;
   background-image: url("@/assets/HomeBackground.jpg");
   background-size: 100% 100%;
   display: flex;
@@ -106,9 +109,9 @@ import {Conf} from "@/Conf";
   }
   to {
     transform: rotate(360deg);
+
   }
 }
-
 
 /* HomePageView Content Image */
 .HomePageView .Content img {
@@ -119,7 +122,7 @@ import {Conf} from "@/Conf";
   min-height: 150px;
   box-shadow: 0 0 6px grey;
   /*animation: rotateBorder 4s linear infinite;*/
-  animation: rainbow 2s linear infinite;
+  animation: rainbow 10s linear infinite;
 }
 
 /* HomePageView Content Title */
@@ -127,6 +130,7 @@ import {Conf} from "@/Conf";
   font-size: 3.5em;
   line-height: 80px;
   margin-top: 10px;
+
 }
 
 /* HomePageView Content link */
